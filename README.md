@@ -11,6 +11,7 @@ coordinate system which incorporates the curvature of the earth.
 
 INSTALL:
 1) To build locally, simply run "make all"
+
 2) To build and install, check the install directory in the makefile (defaults to /usr/local/bin/) 
       and run "make install"
 
