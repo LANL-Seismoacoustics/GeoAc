@@ -10,6 +10,7 @@ include methods to model propagation in a Cartesian coordinate system as well as
 coordinate system which incorporates the curvature of the earth. 
 
 INSTALL:
+
 1) To build locally, simply run "make all"
 
 2) To build and install, check the install directory in the makefile (defaults to /usr/local/bin/) 
