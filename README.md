@@ -13,6 +13,9 @@ See manual for more information.
 ___________________________________________
 ___________________________________________
 
+References
+
+
 
 Keys, Robert G. "Cubic convolution interpolation for digital image processing." Acoustics, Speech and Signal Processing, IEEE Transactions on 29.6 (1981): 1153-1160.
 
