@@ -1,7 +1,8 @@
+#include <stdlib.h>
 #include <iostream>
 #include <iomanip>
 #include <fstream>
-#include <string>
+#include <cstring>
 #include <sstream>
 #include <math.h>
 
