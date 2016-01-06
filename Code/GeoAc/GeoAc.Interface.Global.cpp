@@ -1,10 +1,11 @@
 #ifndef _GEOAC_INTERFACE_CPP_
 #define _GEOAC_INTERFACE_CPP_
 
+#include <stdlib.h>
 #include <math.h>
 #include <iostream>
 #include <fstream>
-#include <string>
+#include <cstring>
 #include <sstream>
 
 #include "GeoAc.Parameters.h"
