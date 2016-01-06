@@ -1,10 +1,11 @@
 # ifndef G2S_GLOBALSPLINE1D_CPP_
 # define G2S_GLOBALSPLINE1D_CPP_
 
+#include <stdlib.h>
 #include <iostream>
 #include <iomanip>
 #include <fstream>
-#include <string>
+#include <cstring>
 #include <sstream>
 #include <math.h>
 
