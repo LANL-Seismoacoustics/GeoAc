@@ -9,7 +9,7 @@
 #include <sstream>
 #include <math.h>
 
-#include "G2S_GLobalSpline1D.h"
+#include "G2S_GlobalSpline1D.h"
 #include "Atmo_State.h"
 #include "GeoAc.Parameters.h"
 
