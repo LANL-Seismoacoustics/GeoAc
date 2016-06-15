@@ -26,24 +26,9 @@ extern double* y_vals;     // y_j elements (y_cnt length)
 extern double* z_vals;     // z_k elements (z_cnt length)
 
 extern double*** T_vals;           // Temperature at (x_i, y_j, z_k) (x_cnt x y_cnt x z_cnt)
-extern double*** T_slopes;         // Slopes for vertical splines of temperature at each x[], y[] node
-extern double*** T_slopes_dx;      // Slopes for d/dx of vertical splines of temperature at each x[], y[] node
-extern double*** T_slopes_dy;      // Slopes for d/dy of vertical splines of temperature at each x[], y[] node
-
 extern double*** u_vals;           // E-W winds at (x_i, y_j, z_k) (x_cnt x y_cnt x z_cnt)
-extern double*** u_slopes;         // Slopes for vertical splines of temperature at each x[], y[] node
-extern double*** u_slopes_dx;      // Slopes for d/dx of vertical splines of temperature at each x[], y[] node
-extern double*** u_slopes_dy;      // Slopes for d/dy of vertical splines of temperature at each x[], y[] node
-
 extern double*** v_vals;           // N-S winds at (x_i, y_j, z_k) (x_cnt x y_cnt x z_cnt)
-extern double*** v_slopes;         // Slopes for vertical splines of temperature at each x[], y[] node
-extern double*** v_slopes_dx;      // Slopes for d/dx of vertical splines of temperature at each x[], y[] node
-extern double*** v_slopes_dy;      // Slopes for d/dy of vertical splines of temperature at each x[], y[] node
-
 extern double*** rho_vals;         // Density at (x_i, y_j, z_k) (x_cnt x y_cnt x z_cnt)
-extern double*** rho_slopes;         // Slopes for vertical splines of temperature at each x[], y[] node
-extern double*** rho_slopes_dx;      // Slopes for d/dx of vertical splines of temperature at each x[], y[] node
-extern double*** rho_slopes_dy;      // Slopes for d/dy of vertical splines of temperature at each x[], y[] node
 
 //----------------------------------------//
 //----------File IO Manipulation----------//

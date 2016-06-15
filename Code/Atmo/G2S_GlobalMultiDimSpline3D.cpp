@@ -52,25 +52,9 @@ double* t_vals;     // t_j elements (t_cnt length)
 double* p_vals;     // p_k elements (p_cnt length)
 
 double*** T_vals;           // Temperature at (r_i, t_j, p_k) (r_cnt x t_cnt x p_cnt)
-double*** T_slopes;         // Slopes for vertical splines of temperature at each t[], p[] node
-double*** T_slopes_dt;      // Slopes for d/dp of vertical splines of temperature at each t[], p[] node
-double*** T_slopes_dp;      // Slopes for d/dt of vertical splines of temperature at each t[], p[] node
-
 double*** u_vals;           // E-W winds at (r_i, t_j, p_k) (r_cnt x t_cnt x p_cnt)
-double*** u_slopes;         // Slopes for vertical splines of temperature at each t[], p[] node
-double*** u_slopes_dt;      // Slopes for d/dt of vertical splines of temperature at each t[], p[] node
-double*** u_slopes_dp;      // Slopes for d/dp of vertical splines of temperature at each t[], p[] node
-
 double*** v_vals;           // N-S winds at (r_i, t_j, p_k) (r_cnt x t_cnt x p_cnt)
-double*** v_slopes;         // Slopes for vertical splines of temperature at each t[], p[] node
-double*** v_slopes_dt;      // Slopes for d/dt of vertical splines of temperature at each t[], p[] node
-double*** v_slopes_dp;      // Slopes for d/dp of vertical splines of temperature at each t[], p[] node
-
 double*** rho_vals;         // Density at (r_i, t_j, p_k) (r_cnt x t_cnt x p_cnt)
-double*** rho_slopes;         // Slopes for vertical splines of temperature at each t[], p[] node
-double*** rho_slopes_dt;      // Slopes for d/dt of vertical splines of temperature at each t[], p[] node
-double*** rho_slopes_dp;      // Slopes for d/dp of vertical splines of temperature at each t[], p[] node
-
 
 //----------------------------------------//
 //----------File IO Manipulation----------//
@@ -1497,9 +1481,6 @@ void Spline_Multi_G2S(char* profile_prefix, char* lat_file, char* lon_file, char
     Temp_Spline.t_vals = t_vals;            Windu_Spline.t_vals = t_vals;           Windv_Spline.t_vals = t_vals;           Density_Spline.t_vals = t_vals;
     Temp_Spline.p_vals = p_vals;            Windu_Spline.p_vals = p_vals;           Windv_Spline.p_vals = p_vals;           Density_Spline.p_vals = p_vals;
     Temp_Spline.f_vals = T_vals;            Windu_Spline.f_vals = u_vals;           Windv_Spline.f_vals = v_vals;           Density_Spline.f_vals = rho_vals;
-    Temp_Spline.f_slopes = T_slopes;        Windu_Spline.f_slopes = u_slopes;       Windv_Spline.f_slopes = v_slopes;       Density_Spline.f_slopes = rho_slopes;
-    Temp_Spline.dfdt_slopes = T_slopes_dt;  Windu_Spline.dfdt_slopes = u_slopes_dt; Windv_Spline.dfdt_slopes = v_slopes_dt; Density_Spline.dfdt_slopes = rho_slopes_dt;
-    Temp_Spline.dfdp_slopes = T_slopes_dp;  Windu_Spline.dfdp_slopes = u_slopes_dp; Windv_Spline.dfdp_slopes = v_slopes_dp; Density_Spline.dfdp_slopes = rho_slopes_dp;
     GeoAc_SetPropRegion();
     
     BuildSlopesArrays(Temp_Spline);     BuildSlopesArrays(Windu_Spline);

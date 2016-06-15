@@ -48,11 +48,6 @@ double* u_vals;    // E-W winds at (r_i, z_k) (r_cnt x z_cnt)
 double* v_vals;    // N-S winds at (r_i, z_k) (r_cnt x z_cnt)
 double* rho_vals;  // Density at (r_i, z_k) (r_cnt x z_cnt)
 
-double* T_slopes;    // Slopes to compute interpoalted temperature at each horizontal node
-double* u_slopes;    // Slopes to compute interpolated E-W winds at each horizontal node
-double* v_slopes;    // Slopes to compute interpolated N-S winds at each horizontal node
-double* rho_slopes;  // Slopes to compute interpolated density at each horizontal node
-
 //----------------------------------------//
 //----------File IO Manipulation----------//
 //----------------------------------------//
@@ -302,7 +297,6 @@ void Spline_Single_G2S(char* file_name, char* format){
     Temp_Spline.accel = accel;      Windu_Spline.accel = accel;     Windv_Spline.accel = accel;     Density_Spline.accel = accel;
     Temp_Spline.x_vals = z_vals;    Windu_Spline.x_vals = z_vals;   Windv_Spline.x_vals = z_vals;   Density_Spline.x_vals = z_vals;
     Temp_Spline.f_vals = T_vals;    Windu_Spline.f_vals = u_vals;   Windv_Spline.f_vals = v_vals;   Density_Spline.f_vals = rho_vals;
-    Temp_Spline.slopes = T_slopes;  Windu_Spline.slopes = u_slopes; Windv_Spline.slopes = v_slopes; Density_Spline.slopes = rho_slopes;
     
     BuildSlopeArray(Temp_Spline);       BuildSlopeArray(Windu_Spline);
     BuildSlopeArray(Density_Spline);    BuildSlopeArray(Windv_Spline);

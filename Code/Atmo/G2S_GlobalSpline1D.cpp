@@ -52,11 +52,6 @@ double* u_vals;    // E-W winds at r_k
 double* v_vals;    // N-S winds at r_k
 double* rho_vals;  // Density at r_k
 
-double* T_slopes;    // Slopes to compute interpoalted temperature
-double* u_slopes;    // Slopes to compute interpolated E-W winds
-double* v_slopes;    // Slopes to compute interpolated N-S winds
-double* rho_slopes;  // Slopes to compute interpolated density
-
 //----------------------------------------//
 //----------File IO Manipulation----------//
 //----------------------------------------//
@@ -315,7 +310,6 @@ void Spline_Single_G2S(char* file_name, char* option){
     Temp_Spline.accel = accel;      Windu_Spline.accel = accel;     Windv_Spline.accel = accel;     Density_Spline.accel = accel;
     Temp_Spline.x_vals = r_vals;    Windu_Spline.x_vals = r_vals;   Windv_Spline.x_vals = r_vals;   Density_Spline.x_vals = r_vals;
     Temp_Spline.f_vals = T_vals;    Windu_Spline.f_vals = u_vals;   Windv_Spline.f_vals = v_vals;   Density_Spline.f_vals = rho_vals;
-    Temp_Spline.slopes = T_slopes;  Windu_Spline.slopes = u_slopes; Windv_Spline.slopes = v_slopes; Density_Spline.slopes = rho_slopes;
     GeoAc_SetPropRegion();
     
     BuildSlopeArray(Temp_Spline);       BuildSlopeArray(Windu_Spline); 

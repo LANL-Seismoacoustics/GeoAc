@@ -21,11 +21,6 @@ extern double* u_vals;      // E-W winds at z_k
 extern double* v_vals;      // N-S winds at z_k
 extern double* rho_vals;    // Density at z_k
 
-extern double* T_slopes;    // Slopes to compute interpoalted temperature
-extern double* u_slopes;    // Slopes to compute interpolated E-W winds
-extern double* v_slopes;    // Slopes to compute interpolated N-S winds
-extern double* rho_slopes;  // Slopes to compute interpolated density
-
 //----------------------------------------//
 //----------File IO Manipulation----------//
 //----------------------------------------//
