@@ -82,15 +82,15 @@ void GeoAc_WriteProfile(string file_name, double azimuth){
 		cout << "Error opening file, check file name." << '\n';
 	} else {
         for(int m = 0; m < 1400; m++){
-            double z0 = m/10.0;
+            double z0 = m / 10.0;
             file_out << z0 << '\t';
-            file_out << pow(c(0, 0, z0), 2) / (R*gam) << '\t';
-            file_out << u(0,0, z0) * 1000.0 << '\t';
-            file_out << v(0,0, z0) * 1000.0 << '\t';
-            file_out << rho(0,0, z0) << '\t';
-            file_out << rho(0,0, z0) * pow(c(0,0,z0),2)/gam << '\t';
-            file_out << c(0,0, z0) << '\t';
-            file_out << c(0,0, z0) + cos(azimuth*Pi/180.0)*u(0,0,z0) + sin(azimuth*Pi/180.0)*v(0,0,z0) << '\t';
+            file_out << pow(c(0, 0, z0) * 1000.0, 2) / (R*gam) << '\t';
+            file_out << u(0, 0, z0) * 1000.0 << '\t';
+            file_out << v(0, 0, z0) * 1000.0 << '\t';
+            file_out << rho(0, 0, z0) << '\t';
+            file_out << rho(0, 0, z0) * pow(c(0, 0, z0) * 1000.0, 2) / gam  * 10.0 << '\t';
+            file_out << c(0, 0, z0) << '\t';
+            file_out << c(0, 0, z0) + cos(azimuth * Pi / 180.0) * u(0, 0, z0) + sin(azimuth * Pi / 180.0) * v(0, 0, z0) << '\t';
             file_out << '\n';
         }	
         file_out.close();
@@ -104,13 +104,13 @@ void GeoAc_WriteProfile(string file_name, double x0, double y0, double azimuth){
 		cout << "Error opening file, check file name." << '\n';
 	} else {
         for(int m = 0; m < 1400; m++){
-            double z0 = m/10.0;
+            double z0 = m / 10.0;
             file_out << z0 << '\t';
-            file_out << pow(c(x0, y0, z0), 2) / (R*gam) << '\t';
+            file_out << pow(c(x0, y0, z0) * 1000.0, 2) / (R*gam) << '\t';
             file_out << u(x0, y0, z0) * 1000.0 << '\t';
             file_out << v(x0, y0, z0) * 1000.0 << '\t';
             file_out << rho(x0, y0, z0) << '\t';
-            file_out << rho(x0, y0, z0) * pow(c(x0, y0, z0),2)/gam << '\t';
+            file_out << rho(x0, y0, z0) * pow(c(x0, y0, z0) * 1000.0, 2) / gam * 10.0 << '\t';
             file_out << c(x0, y0, z0) << '\t';
             file_out << c(x0, y0, z0) + cos(azimuth * Pi/180.0) * u(x0, y0, z0) + sin(azimuth * Pi/180.0) * v(x0, y0, z0) << '\t';
             file_out << '\n';
