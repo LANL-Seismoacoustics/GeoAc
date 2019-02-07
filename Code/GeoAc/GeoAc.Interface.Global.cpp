@@ -90,7 +90,7 @@ void GeoAc_WriteProfile(string file_name, double azimuth){
             file_out << rho(r0,Pi/4.0, 0) << '\t';
             file_out << rho(r0, Pi/4.0, 0) * pow(c(r0,Pi/4.0, 0) * 1000.0, 2) / gam * 10.0 << '\t';
             file_out << c(r0,Pi/4.0,0) << '\t';
-            file_out << c(r0,Pi/4.0,0) + cos((90.0 - azimuth)*Pi/180.0)*u(r0,Pi/4.0,0) + sin((90.0 - azimuth)*Pi/180.0)*v(r0,Pi/4.0,0) << '\n';
+            file_out << c(r0,Pi/4.0,0) + cos((azimuth)*Pi/180.0)*u(r0,Pi/4.0,0) + sin((azimuth)*Pi/180.0)*v(r0,Pi/4.0,0) << '\n';
         }
         file_out.close();
     }
@@ -111,7 +111,7 @@ void GeoAc_WriteProfile(string file_name, double lat_src, double lon_src, double
             file_out << rho(r0,lat_src,lon_src) << '\t';
             file_out << rho(r0,lat_src,lon_src)*pow(c(r0,lat_src, lon_src) * 1000.0, 2) / gam * 10.0 << '\t';
             file_out << c(r0,lat_src,lon_src) << '\t';
-            file_out << c(r0,lat_src,lon_src) + cos((90.0 - azimuth)*Pi/180.0)*u(r0,lat_src,lon_src) + sin((90.0 - azimuth)*Pi/180.0)*v(r0,lat_src,lon_src) << '\n';
+            file_out << c(r0,lat_src,lon_src) + cos((azimuth)*Pi/180.0)*u(r0,lat_src,lon_src) + sin((azimuth)*Pi/180.0)*v(r0,lat_src,lon_src) << '\n';
         }
         file_out.close();
     }
