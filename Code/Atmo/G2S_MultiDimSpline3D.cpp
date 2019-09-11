@@ -151,7 +151,7 @@ void Load_G2S_Multi(char* file_prefix, char* locx_file, char* locy_file, char* o
     // Copy the G2S data into the various arrays
     for(int ny = 0; ny < y_cnt; ny++){
     for(int nx = 0; nx < x_cnt; nx++){
-        sprintf(output_buffer, "%s%i.met", file_prefix, nx + ny*x_cnt);
+        sprintf(output_buffer, "%s%i.met", file_prefix, nx * y_cnt + ny);
         ifstream file_in; file_in.open(output_buffer);
             
         if (strncmp(option, "zTuvdp",6) == 0){
