@@ -20,6 +20,9 @@ using namespace std;
 
 void GeoAc3D_RngDep_Usage(){
     cout << '\n';
+    cout << "NOTE: GeoAc methods are no longer updated and have been replaced by the infraGA/GeoAc" << '\n';
+	cout << "methods available at https://github.com/LANL-Seismoacoustics/infraGA" << '\n' << '\n';
+
     cout << '\t' << "#################################################" << '\n';
     cout << '\t' << "####             GeoAc3D.RngDep              ####" << '\n';
     cout << '\t' << "####      Three-Dimensional Ray Tracing      ####" << '\n';

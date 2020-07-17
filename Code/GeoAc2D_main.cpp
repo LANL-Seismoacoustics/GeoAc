@@ -15,6 +15,9 @@
 using namespace std;
 
 void GeoAc2D_Usage(){
+    cout << "NOTE: GeoAc methods are no longer updated and have been replaced by the infraGA/GeoAc" << '\n';
+	cout << "methods available at https://github.com/LANL-Seismoacoustics/infraGA" << '\n' << '\n';
+
     cout << '\n';
     cout << '\t' << "#######################################################" << '\n';
     cout << '\t' << "####                    GeoAc2D                    ####" << '\n';

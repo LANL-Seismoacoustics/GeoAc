@@ -10,6 +10,10 @@ include methods to model propagation in a Cartesian coordinate system as well as
 coordinate system which incorporates the curvature of the earth. 
 
 See manual for more information.
+
+NOTE: GeoAc methods are no longer updated and have been replaced by the infraGA/GeoAc methods
+that are available at https://github.com/LANL-Seismoacoustics/infraGA
+
 ___________________________________________
 ___________________________________________
 

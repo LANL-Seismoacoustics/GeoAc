@@ -19,6 +19,9 @@ using namespace std;
 
 void GeoAcGlobal_Usage(){
     cout << '\n';
+    cout << "NOTE: GeoAc methods are no longer updated and have been replaced by the infraGA/GeoAc" << '\n';
+	cout << "methods available at https://github.com/LANL-Seismoacoustics/infraGA" << '\n' << '\n';
+
     cout << '\t' << "#############################################" << '\n';
     cout << '\t' << "####             GeoAcGlobal             ####" << '\n';
     cout << '\t' << "####    Three-Dimensional Ray Tracing    ####" << '\n';
